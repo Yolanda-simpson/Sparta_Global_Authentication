@@ -1,0 +1,86 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RentACarModelStoreContainer" CdmEntityContainer="RentACarEntities">
+    <EntitySetMapping Name="Cars">
+      <EntityTypeMapping TypeName="RentACarModel.Car">
+        <MappingFragment StoreEntitySet="Cars">
+          <ScalarProperty Name="CarID" ColumnName="CarID" />
+          <ScalarProperty Name="CarManufacturer" ColumnName="CarManufacturer" />
+          <ScalarProperty Name="carColour" ColumnName="carColour" />
+          <ScalarProperty Name="numberOfSeats" ColumnName="numberOfSeats" />
+          <ScalarProperty Name="carSize" ColumnName="carSize" />
+          <ScalarProperty Name="carType" ColumnName="carType" />
+          <ScalarProperty Name="RentaCar_rentACarID" ColumnName="RentaCar_rentACarID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MiniBus">
+      <EntityTypeMapping TypeName="RentACarModel.MiniBu">
+        <MappingFragment StoreEntitySet="MiniBus">
+          <ScalarProperty Name="MinibusID" ColumnName="MinibusID" />
+          <ScalarProperty Name="regNumber" ColumnName="regNumber" />
+          <ScalarProperty Name="MiniBusColour" ColumnName="MiniBusColour" />
+          <ScalarProperty Name="miniBusManufacturer" ColumnName="miniBusManufacturer" />
+          <ScalarProperty Name="numberOfSeats" ColumnName="numberOfSeats" />
+          <ScalarProperty Name="miniBusSize" ColumnName="miniBusSize" />
+          <ScalarProperty Name="RentAMiniBus_RentAMiniBusID" ColumnName="RentAMiniBus_RentAMiniBusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RentaCars">
+      <EntityTypeMapping TypeName="RentACarModel.RentaCar">
+        <MappingFragment StoreEntitySet="RentaCars">
+          <ScalarProperty Name="rentACarID" ColumnName="rentACarID" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="Age" ColumnName="Age" />
+          <ScalarProperty Name="hireDate" ColumnName="hireDate" />
+          <ScalarProperty Name="CarID" ColumnName="CarID" />
+          <ScalarProperty Name="duration" ColumnName="duration" />
+          <ScalarProperty Name="emailAddress" ColumnName="emailAddress" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RentAMiniBus">
+      <EntityTypeMapping TypeName="RentACarModel.RentAMiniBu">
+        <MappingFragment StoreEntitySet="RentAMiniBus">
+          <ScalarProperty Name="RentAMiniBusID" ColumnName="RentAMiniBusID" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="emailAddess" ColumnName="emailAddess" />
+          <ScalarProperty Name="hireDate" ColumnName="hireDate" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+          <ScalarProperty Name="MinibusID" ColumnName="MinibusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RentAVans">
+      <EntityTypeMapping TypeName="RentACarModel.RentAVan">
+        <MappingFragment StoreEntitySet="RentAVans">
+          <ScalarProperty Name="RentAVanID" ColumnName="RentAVanID" />
+          <ScalarProperty Name="vanID" ColumnName="vanID" />
+          <ScalarProperty Name="firstName" ColumnName="firstName" />
+          <ScalarProperty Name="lastName" ColumnName="lastName" />
+          <ScalarProperty Name="duation" ColumnName="duation" />
+          <ScalarProperty Name="HireDate" ColumnName="HireDate" />
+          <ScalarProperty Name="EmailAddress" ColumnName="EmailAddress" />
+          <ScalarProperty Name="phoneNumber" ColumnName="phoneNumber" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Vans">
+      <EntityTypeMapping TypeName="RentACarModel.Van">
+        <MappingFragment StoreEntitySet="Vans">
+          <ScalarProperty Name="vanID" ColumnName="vanID" />
+          <ScalarProperty Name="regNumber" ColumnName="regNumber" />
+          <ScalarProperty Name="vanColour" ColumnName="vanColour" />
+          <ScalarProperty Name="vanManufacturer" ColumnName="vanManufacturer" />
+          <ScalarProperty Name="vanSize" ColumnName="vanSize" />
+          <ScalarProperty Name="numberOfSeats" ColumnName="numberOfSeats" />
+          <ScalarProperty Name="RentAVan_RentAVanID" ColumnName="RentAVan_RentAVanID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

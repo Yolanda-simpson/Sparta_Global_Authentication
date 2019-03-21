@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ActionFilters.Models.MiniBu>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.regNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MiniBusColour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.miniBusManufacturer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numberOfSeats)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.miniBusSize)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.regNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MiniBusColour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.miniBusManufacturer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numberOfSeats)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.miniBusSize)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.MinibusID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.MinibusID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.MinibusID })
+        </td>
+    </tr>
+}
+
+</table>

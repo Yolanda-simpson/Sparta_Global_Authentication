@@ -1,0 +1,140 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="RentACarModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Car">
+    <Key>
+      <PropertyRef Name="CarID" />
+    </Key>
+    <Property Name="CarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CarManufacturer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="carColour" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="numberOfSeats" Type="Int32" Nullable="false" />
+    <Property Name="carSize" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="carType" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RentaCar_rentACarID" Type="Int32" />
+    <NavigationProperty Name="RentaCar" Relationship="Self.FK_dbo_Cars_dbo_RentaCars_RentaCar_rentACarID" FromRole="Cars" ToRole="RentaCars" />
+  </EntityType>
+  <EntityType Name="MiniBu">
+    <Key>
+      <PropertyRef Name="MinibusID" />
+    </Key>
+    <Property Name="MinibusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="regNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MiniBusColour" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="miniBusManufacturer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="numberOfSeats" Type="Int32" Nullable="false" />
+    <Property Name="miniBusSize" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="RentAMiniBus_RentAMiniBusID" Type="Int32" />
+    <NavigationProperty Name="RentAMiniBu" Relationship="Self.FK_dbo_MiniBus_dbo_RentAMiniBus_RentAMiniBus_RentAMiniBusID" FromRole="MiniBus" ToRole="RentAMiniBus" />
+  </EntityType>
+  <EntityType Name="RentaCar">
+    <Key>
+      <PropertyRef Name="rentACarID" />
+    </Key>
+    <Property Name="rentACarID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="LastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="Age" Type="Int32" Nullable="false" />
+    <Property Name="hireDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="CarID" Type="Int32" Nullable="false" />
+    <Property Name="duration" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="emailAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="phoneNumber" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="Cars" Relationship="Self.FK_dbo_Cars_dbo_RentaCars_RentaCar_rentACarID" FromRole="RentaCars" ToRole="Cars" />
+  </EntityType>
+  <EntityType Name="RentAMiniBu">
+    <Key>
+      <PropertyRef Name="RentAMiniBusID" />
+    </Key>
+    <Property Name="RentAMiniBusID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="emailAddess" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="hireDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="phoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="MinibusID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="MiniBus" Relationship="Self.FK_dbo_MiniBus_dbo_RentAMiniBus_RentAMiniBus_RentAMiniBusID" FromRole="RentAMiniBus" ToRole="MiniBus" />
+  </EntityType>
+  <EntityType Name="RentAVan">
+    <Key>
+      <PropertyRef Name="RentAVanID" />
+    </Key>
+    <Property Name="RentAVanID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="vanID" Type="Int32" Nullable="false" />
+    <Property Name="firstName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="lastName" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="duation" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="HireDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="EmailAddress" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="phoneNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Vans" Relationship="Self.FK_dbo_Vans_dbo_RentAVans_RentAVan_RentAVanID" FromRole="RentAVans" ToRole="Vans" />
+  </EntityType>
+  <EntityType Name="Van">
+    <Key>
+      <PropertyRef Name="vanID" />
+    </Key>
+    <Property Name="vanID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="regNumber" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vanColour" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vanManufacturer" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="vanSize" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="numberOfSeats" Type="Int32" Nullable="false" />
+    <Property Name="RentAVan_RentAVanID" Type="Int32" />
+    <NavigationProperty Name="RentAVan" Relationship="Self.FK_dbo_Vans_dbo_RentAVans_RentAVan_RentAVanID" FromRole="Vans" ToRole="RentAVans" />
+  </EntityType>
+  <Association Name="FK_dbo_Cars_dbo_RentaCars_RentaCar_rentACarID">
+    <End Type="Self.RentaCar" Multiplicity="0..1" Role="RentaCars" />
+    <End Type="Self.Car" Multiplicity="*" Role="Cars" />
+    <ReferentialConstraint>
+      <Principal Role="RentaCars">
+        <PropertyRef Name="rentACarID" />
+      </Principal>
+      <Dependent Role="Cars">
+        <PropertyRef Name="RentaCar_rentACarID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_MiniBus_dbo_RentAMiniBus_RentAMiniBus_RentAMiniBusID">
+    <End Role="RentAMiniBus" Type="Self.RentAMiniBu" Multiplicity="0..1" />
+    <End Role="MiniBus" Type="Self.MiniBu" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RentAMiniBus">
+        <PropertyRef Name="RentAMiniBusID" />
+      </Principal>
+      <Dependent Role="MiniBus">
+        <PropertyRef Name="RentAMiniBus_RentAMiniBusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_dbo_Vans_dbo_RentAVans_RentAVan_RentAVanID">
+    <End Role="RentAVans" Type="Self.RentAVan" Multiplicity="0..1" />
+    <End Role="Vans" Type="Self.Van" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RentAVans">
+        <PropertyRef Name="RentAVanID" />
+      </Principal>
+      <Dependent Role="Vans">
+        <PropertyRef Name="RentAVan_RentAVanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="RentACarEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Cars" EntityType="Self.Car" />
+    <EntitySet Name="MiniBus" EntityType="Self.MiniBu" />
+    <EntitySet Name="RentaCars" EntityType="Self.RentaCar" />
+    <EntitySet Name="RentAMiniBus" EntityType="Self.RentAMiniBu" />
+    <EntitySet Name="RentAVans" EntityType="Self.RentAVan" />
+    <EntitySet Name="Vans" EntityType="Self.Van" />
+    <AssociationSet Name="FK_dbo_Cars_dbo_RentaCars_RentaCar_rentACarID" Association="Self.FK_dbo_Cars_dbo_RentaCars_RentaCar_rentACarID">
+      <End EntitySet="RentaCars" Role="RentaCars" />
+      <End EntitySet="Cars" Role="Cars" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_MiniBus_dbo_RentAMiniBus_RentAMiniBus_RentAMiniBusID" Association="Self.FK_dbo_MiniBus_dbo_RentAMiniBus_RentAMiniBus_RentAMiniBusID">
+      <End Role="RentAMiniBus" EntitySet="RentAMiniBus" />
+      <End Role="MiniBus" EntitySet="MiniBus" />
+    </AssociationSet>
+    <AssociationSet Name="FK_dbo_Vans_dbo_RentAVans_RentAVan_RentAVanID" Association="Self.FK_dbo_Vans_dbo_RentAVans_RentAVan_RentAVanID">
+      <End Role="RentAVans" EntitySet="RentAVans" />
+      <End Role="Vans" EntitySet="Vans" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

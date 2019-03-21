@@ -1,0 +1,72 @@
+﻿@model ActionFilters.Models.MiniBu
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>MiniBu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.regNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.regNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiniBusColour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiniBusColour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.miniBusManufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.miniBusManufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numberOfSeats)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numberOfSeats)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.miniBusSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.miniBusSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentAMiniBu.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentAMiniBu.firstName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

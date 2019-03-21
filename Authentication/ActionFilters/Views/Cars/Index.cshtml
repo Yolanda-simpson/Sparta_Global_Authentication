@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ActionFilters.Models.Car>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.CarManufacturer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.carColour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numberOfSeats)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.carSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.carType)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.CarManufacturer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.carColour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numberOfSeats)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.carSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.carType)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.CarID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.CarID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.CarID })
+        </td>
+    </tr>
+}
+
+</table>

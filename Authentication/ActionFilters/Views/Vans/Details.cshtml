@@ -1,0 +1,66 @@
+﻿@model ActionFilters.Models.Van
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Van</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.regNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.regNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vanColour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vanColour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vanManufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vanManufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.vanSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.vanSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numberOfSeats)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numberOfSeats)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentAVan.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentAVan.firstName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.vanID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

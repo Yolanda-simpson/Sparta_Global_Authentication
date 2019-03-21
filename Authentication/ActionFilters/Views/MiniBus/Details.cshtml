@@ -1,0 +1,66 @@
+﻿@model ActionFilters.Models.MiniBu
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>MiniBu</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.regNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.regNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiniBusColour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiniBusColour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.miniBusManufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.miniBusManufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numberOfSeats)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numberOfSeats)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.miniBusSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.miniBusSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentAMiniBu.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentAMiniBu.firstName)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.MinibusID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

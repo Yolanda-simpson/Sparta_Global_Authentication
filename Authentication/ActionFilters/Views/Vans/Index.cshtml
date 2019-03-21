@@ -1,0 +1,57 @@
+﻿@model IEnumerable<ActionFilters.Models.Van>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.regNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vanColour)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vanManufacturer)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.vanSize)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.numberOfSeats)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.regNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vanColour)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vanManufacturer)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.vanSize)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.numberOfSeats)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.vanID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.vanID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.vanID })
+        </td>
+    </tr>
+}
+
+</table>

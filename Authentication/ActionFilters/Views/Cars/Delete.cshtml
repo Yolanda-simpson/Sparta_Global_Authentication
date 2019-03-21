@@ -1,0 +1,72 @@
+﻿@model ActionFilters.Models.Car
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Car</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CarManufacturer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CarManufacturer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.carColour)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.carColour)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.numberOfSeats)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.numberOfSeats)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.carSize)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.carSize)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.carType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.carType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RentaCar.firstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RentaCar.firstName)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

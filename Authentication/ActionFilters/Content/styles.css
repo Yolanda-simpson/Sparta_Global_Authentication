@@ -1,0 +1,25 @@
+﻿body {
+    background-image: url("tunnel.png");
+    background-repeat: repeat-x;
+    color: white;
+}
+
+h4 {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+#form-group {
+    color: white;
+}
+
+#tablecolor {
+    color: white;
+}
+
+.jumbotron {
+    color: black;
+}

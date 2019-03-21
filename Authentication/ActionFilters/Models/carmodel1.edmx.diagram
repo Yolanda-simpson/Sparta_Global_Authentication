@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="17470df8c1264c99a0e42f45b88cf7d8" Name="Diagram1">
+        <EntityTypeShape EntityType="RentACarModel1.Car" Width="1.5" PointX="8" PointY="1.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="RentACarModel1.MiniBu" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RentACarModel1.RentaCar" Width="1.5" PointX="5.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="RentACarModel1.RentAMiniBu" Width="1.5" PointX="0.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="RentACarModel1.RentAVan" Width="1.5" PointX="0.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="RentACarModel1.user" Width="1.5" PointX="5.75" PointY="4.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="RentACarModel1.Van" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <AssociationConnector Association="RentACarModel1.FK_dbo_Cars_dbo_RentaCars_RentaCar_rentACarID" ManuallyRouted="false" />
+        <AssociationConnector Association="RentACarModel1.FK_dbo_MiniBus_dbo_RentAMiniBus_RentAMiniBus_RentAMiniBusID" ManuallyRouted="false" />
+        <AssociationConnector Association="RentACarModel1.FK_dbo_Vans_dbo_RentAVans_RentAVan_RentAVanID" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
