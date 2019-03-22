@@ -166,3 +166,9 @@ C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week10\day4\Sparta_Global_Authe
 C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week10\day4\Sparta_Global_Authentication\Authentication\ActionFilters\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
 C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week10\day4\Sparta_Global_Authentication\Authentication\ActionFilters\obj\Debug\ActionFilters.csproj.CopyComplete
 C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week10\day4\Sparta_Global_Authentication\Authentication\ActionFilters\obj\Debug\ActionFilters.csprojAssemblyReference.cache
+C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week10\day4\Sparta_Global_Authentication\Authentication\ActionFilters\bin\System.Net.Http.Formatting.dll
+C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week10\day4\Sparta_Global_Authentication\Authentication\ActionFilters\bin\System.Web.Http.dll
+C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week10\day4\Sparta_Global_Authentication\Authentication\ActionFilters\bin\System.Web.Http.WebHost.dll
+C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week10\day4\Sparta_Global_Authentication\Authentication\ActionFilters\bin\System.Net.Http.Formatting.xml
+C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week10\day4\Sparta_Global_Authentication\Authentication\ActionFilters\bin\System.Web.Http.xml
+C:\Users\tech-w99a.LAPTOP-3BLG1NHP\Engineering26\week10\day4\Sparta_Global_Authentication\Authentication\ActionFilters\bin\System.Web.Http.WebHost.xml
